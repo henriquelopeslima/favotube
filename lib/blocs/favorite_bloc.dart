@@ -7,7 +7,6 @@ import 'package:rxdart/rxdart.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class FavoriteBloc extends BlocBase {
-  
   Map<String, Video> _favorites = {};
 
   // final StreamController<Map<String, Video>> _favController = StreamController<Map<String, Video>>.broadcast();

@@ -10,7 +10,6 @@ import 'package:flutter/material.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-   
     final bloc = BlocProvider.getBloc<VideosBloc>();
 
     return Scaffold(
@@ -18,15 +17,13 @@ class Home extends StatelessWidget {
         title: Container(
           height: 25,
           child: Image.asset("assets/img/logo_youtube.png"),
-          
         ),
         elevation: 0,
         backgroundColor: Colors.black87,
         actions: <Widget>[
           Align(
             alignment: Alignment.center,
-            child:
-            StreamBuilder<Map<String, Video>>(
+            child: StreamBuilder<Map<String, Video>>(
               stream: BlocProvider.getBloc<FavoriteBloc>().outFav,
               builder: (context, snapshot) {
                 if (snapshot.hasData)

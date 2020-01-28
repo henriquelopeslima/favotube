@@ -19,7 +19,7 @@ class Favorites extends StatelessWidget {
       backgroundColor: Colors.black87,
       body: StreamBuilder<Map<String, Video>>(
         stream: bloc.outFav,
-        initialData: bloc.outFav == null ? {} : bloc.outFav,
+        initialData: {},
         builder: (context, snapshot) {
           return ListView(
             children: snapshot.data.values.map((v) {

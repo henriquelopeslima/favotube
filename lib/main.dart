@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
       blocs: [
         Bloc((i) => VideosBloc()),
-        Bloc((i) => FavoriteBloc())
+        Bloc((i) => FavoriteBloc()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
